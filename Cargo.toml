@@ -6,3 +6,14 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+axum = "0.6.20"
+tokio = { version = "1", features = ["full"] }
+serde_json = "1.0.2"
+serde = "1.0.189"
+tower-http = { version = "0.4.4", features = ["fs"] }
+jwt = "0.16.0"
+sha2 = "0.10.7"
+hmac = "0.12.1"
+
+[dev-dependencies]
+httpc-test = "0.1.7"
