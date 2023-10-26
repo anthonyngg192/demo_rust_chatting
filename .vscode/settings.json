@@ -1,0 +1,47 @@
+{
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "[rust]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.sortJSON": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.ignoreWords": [
+    "nestjs",
+    "Pagings",
+    "commentable",
+    "pino",
+    "unfollow",
+    "unfollowing",
+    "websockets",
+    "middlewares",
+    "fanout",
+    "upsert"
+  ],
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".vscode",
+    ".vscode-insiders",
+    ".env*",
+    "src/i18n/"
+  ],
+  "sortJSON.excludedFiles": ["package.json", "package-lock.json"],
+  "cSpell.words": ["Authed", "backoff", "Hmac"],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
