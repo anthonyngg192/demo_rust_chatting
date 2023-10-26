@@ -1,9 +1,13 @@
 use std::net::SocketAddr;
 
 mod error;
+use crate::model::ModelController;
+
 pub use self::error::{Error, Result};
 
 mod web;
+
+mod model;
 
 use axum::{
     extract::{Path, Query},
@@ -15,9 +19,13 @@ use serde::Deserialize;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
+
+    let mc = ModelController::new().await;
+    
     let routes_hello = Router::new()
         .merge(routes_hello())
         .merge(web::routes_login::routes())
+        .nest("/api",web::routes_ticket::routes(mc.unwrap()))
         .layer(middleware::map_response(main_response_mapper));
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
