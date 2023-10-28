@@ -24,6 +24,7 @@ pub async fn mw_require_auth<B>(
 
 pub async fn mv_ctx_resolve<B>(req: Request<B>, next: Next<B>) -> Result<Response> {
     println!("->> {:<12} - mw_ctx_resolver", "MIDDLEWARE");
+    Ctx::new(1);
     Ok(next.run(req).await)
 }
 
