@@ -6,6 +6,7 @@ use crate::{log::log_request, model::ModelController};
 pub use self::error::{Error, Result};
 
 mod ctx;
+mod database;
 mod log;
 mod model;
 mod web;
